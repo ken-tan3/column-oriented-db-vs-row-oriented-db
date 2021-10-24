@@ -13,7 +13,7 @@ postgresql: stable 13.4 (bottled), HEAD
 
 # 今回実行したSQL
 
-[こちらのgit]()に記載している。
+[こちらのgit](https://github.com/Ken3-4649/column-oriented-db-vs-row-oriented-db)に記載している。
 
 # パフォーマンステスト: 行指向テーブル
 
