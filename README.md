@@ -89,7 +89,7 @@ $ python3 /Users/mac/Psql/ExtractTimeFromPerformanceLog/ExtractTimeFromPerforman
 - ExtractTimeFromPerformanceLog.pyがおまけ2の内容。
 
 ```
-tree
+$ tree
 .
 ├── ColumnOrientedDatabase
 │   ├── Csv
