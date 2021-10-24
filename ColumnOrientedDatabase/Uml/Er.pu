@@ -1,0 +1,67 @@
+@startuml Erd
+
+' entity
+
+entity one {
+  id: integer
+  --
+  column_1: integer
+}
+
+entity two {
+  id: integer
+  --
+  column_2: integer
+}
+
+entity three {
+  id: integer
+  --
+  column_3: integer
+}
+
+entity four {
+  id: integer
+  --
+  column_4: integer
+}
+
+entity five {
+  id: integer
+  --
+  column_5: integer
+}
+
+entity six {
+  id: integer
+  --
+  column_6: integer
+}
+
+entity seven {
+  id: integer
+  --
+  column_7: integer
+}
+
+entity eight {
+  id: integer
+  --
+  column_8: integer
+}
+
+entity nine {
+  id: integer
+  --
+  column_9: integer
+}
+
+entity ten {
+  id: integer
+  --
+  column_10: integer
+}
+
+' entity-relation
+
+@enduml

@@ -1,0 +1,20 @@
+2021-10-18 11:48:33.553 JST [6009] LOG:  statement: CREATE TABLE one (id integer, column_1 integer);
+2021-10-18 11:48:33.570 JST [6009] LOG:  duration: 17.377 ms
+2021-10-18 11:48:33.570 JST [6009] LOG:  statement: CREATE TABLE two (id integer, column_2 integer);
+2021-10-18 11:48:33.571 JST [6009] LOG:  duration: 0.691 ms
+2021-10-18 11:48:33.571 JST [6009] LOG:  statement: CREATE TABLE three (id integer, column_3 integer);
+2021-10-18 11:48:33.572 JST [6009] LOG:  duration: 0.509 ms
+2021-10-18 11:48:33.572 JST [6009] LOG:  statement: CREATE TABLE four (id integer, column_4 integer);
+2021-10-18 11:48:33.572 JST [6009] LOG:  duration: 0.491 ms
+2021-10-18 11:48:33.572 JST [6009] LOG:  statement: CREATE TABLE five (id integer, column_5 integer);
+2021-10-18 11:48:33.573 JST [6009] LOG:  duration: 0.503 ms
+2021-10-18 11:48:33.573 JST [6009] LOG:  statement: CREATE TABLE six (id integer, column_6 integer);
+2021-10-18 11:48:33.573 JST [6009] LOG:  duration: 0.485 ms
+2021-10-18 11:48:33.574 JST [6009] LOG:  statement: CREATE TABLE seven (id integer, column_7 integer);
+2021-10-18 11:48:33.574 JST [6009] LOG:  duration: 0.541 ms
+2021-10-18 11:48:33.574 JST [6009] LOG:  statement: CREATE TABLE eight (id integer, column_8 integer);
+2021-10-18 11:48:33.575 JST [6009] LOG:  duration: 0.596 ms
+2021-10-18 11:48:33.575 JST [6009] LOG:  statement: CREATE TABLE nine (id integer, column_9 integer);
+2021-10-18 11:48:33.575 JST [6009] LOG:  duration: 0.592 ms
+2021-10-18 11:48:33.575 JST [6009] LOG:  statement: CREATE TABLE ten (id integer, column_10 integer);
+2021-10-18 11:48:33.576 JST [6009] LOG:  duration: 0.618 ms

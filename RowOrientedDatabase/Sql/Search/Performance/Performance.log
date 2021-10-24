@@ -1,0 +1,7 @@
+2021-10-19 00:03:36.987 JST [19672] LOG:  statement: SELECT
+	  id
+	FROM
+	  one_to_ten
+	WHERE
+	  one_to_ten.column_1 = 5000;
+2021-10-19 00:03:36.988 JST [19672] LOG:  duration: 1.264 ms

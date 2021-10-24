@@ -1,0 +1,2 @@
+2021-10-19 00:04:32.953 JST [19672] LOG:  statement: SELECT * FROM one_to_ten;
+2021-10-19 00:04:32.960 JST [19672] LOG:  duration: 6.577 ms

@@ -1,0 +1,14 @@
+2021-10-19 00:00:13.006 JST [19672] LOG:  statement: CREATE TABLE one_to_ten (
+	  id integer,
+	  column_1 integer,
+	  column_2 integer,
+	  column_3 integer,
+	  column_4 integer,
+	  column_5 integer,
+	  column_6 integer,
+	  column_7 integer,
+	  column_8 integer,
+	  column_9 integer,
+	  column_10 integer
+	);
+2021-10-19 00:00:13.012 JST [19672] LOG:  duration: 5.684 ms
