@@ -86,7 +86,7 @@ $ python3 /Users/mac/Psql/ExtractTimeFromPerformanceLog/ExtractTimeFromPerforman
 #### おまけ3: ディレクトリ構成
 
 - ColumnOrientedDatabaseとRowOrientedDatabaseのsqlディレクトリに、今回のパフォーマンステストで用いたSQLファイル、SQLを作成するためのpythonのファイル、SQLの実行時間を記載したログファイルを置いている。
-- ExtractTimeFromPerformanceLog.pyが、おまけ2の内容。
+- ExtractTimeFromPerformanceLog.pyがおまけ2の内容。
 
 ```
 tree
