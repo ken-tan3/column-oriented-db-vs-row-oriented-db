@@ -40,6 +40,11 @@ postgresql: stable 13.4 (bottled), HEAD
 
 結果的に、列で管理すると相当のパフォーマンス低下に繋がることがわかりました。
 
+#### 注意事項
+
+- UMLのディレクトリでは、ER図と書いているが、リレーションは記載せず、どのようなテーブルがあるかだけを記載した。
+- SQLのクエリの書き方で大きくパフォーマンスが変わると思われる。
+
 #### おまけ1: ログファイルの出力方法
 
 - ログファイルの設定場所
@@ -70,8 +75,7 @@ $ grep "2021-xx-xx 11:50:" postgres.log >> /Users/mac/Psql/ColumnOrientedDatabas
 
 #### おまけ2: ログファイルから時間だけを取得するモジュール
 
-下記ディレクトリ(/Users/mac/Psql/ExtractTimeFromPerformanceLog)に、ログファイルから時間だけを取り出すモジュールを作成した。
-ファイル実行時に、第一引数として該当のログファイルを指定すると、そのログファイルに記載された時間を合計して、出力するようにした。
+下記ディレクトリ(/Users/mac/Psql/ExtractTimeFromPerformanceLog)に、ログファイルから時間だけを取り出すモジュールを作成した。ファイル実行時に、第一引数として該当のログファイルを指定すると、そのログファイルに記載された時間を合計して、出力するようにした。
 
 - ファイル実行例
 ```
@@ -79,7 +83,109 @@ $ python3 /Users/mac/Psql/ExtractTimeFromPerformanceLog/ExtractTimeFromPerforman
 5502.076999999987ms
 ```
 
-#### 注意事項
+#### おまけ3: ディレクトリ構成
 
-- UMLのディレクトリでは、ER図と書いているが、リレーションは記載せず、どのようなテーブルがあるかだけを記載した。
-- SQLのクエリの書き方で大きくパフォーマンスが変わると思われる。
+- ColumnOrientedDatabaseとRowOrientedDatabaseのsqlディレクトリに、今回のパフォーマンステストで用いたSQLファイル、SQLを作成するためのpythonのファイル、SQLの実行時間を記載したログファイルを置いている。
+- ExtractTimeFromPerformanceLog.pyが、おまけ2の内容。
+
+```
+tree
+.
+├── ColumnOrientedDatabase
+│   ├── Csv
+│   │   ├── Output
+│   │   │   └── 10000Rows.csv
+│   │   └── Process
+│   │       └── CreateCsv.py
+│   ├── Sql
+│   │   ├── CreateTable
+│   │   │   ├── Output
+│   │   │   │   └── CreateTable.sql
+│   │   │   └── Performance
+│   │   │       └── Performance.log
+│   │   ├── Delete
+│   │   │   ├── Output
+│   │   │   │   └── Delete.sql
+│   │   │   ├── Performance
+│   │   │   │   └── Performance.log
+│   │   │   └── Process
+│   │   │       └── Delete.py
+│   │   ├── Insert
+│   │   │   ├── Output
+│   │   │   │   └── Insert.sql
+│   │   │   ├── Performance
+│   │   │   │   └── Performance.log
+│   │   │   └── Process
+│   │   │       └── Insert.py
+│   │   ├── Search
+│   │   │   ├── Output
+│   │   │   │   └── Search.sql
+│   │   │   └── Performance
+│   │   │       └── Performance.log
+│   │   ├── Select
+│   │   │   ├── Output
+│   │   │   │   └── Select.sql
+│   │   │   └── Performance
+│   │   │       └── Performance.log
+│   │   └── Update
+│   │       ├── Output
+│   │       │   └── Update.sql
+│   │       ├── Performance
+│   │       │   └── Performance.log
+│   │       └── Process
+│   │           └── Update.py
+│   └── Uml
+│       ├── Er.pu
+│       └── Erd.png
+├── ExtractTimeFromPerformanceLog
+│   └── ExtractTimeFromPerformanceLog.py
+├── README.md
+└── RowOrientedDatabase
+    ├── Csv
+    │   ├── Output
+    │   │   └── Matrix.csv
+    │   └── Process
+    │       └── CreateCsvMatrix.py
+    ├── Sql
+    │   ├── CreateTable
+    │   │   ├── Output
+    │   │   │   └── CreateTable.sql
+    │   │   └── Performance
+    │   │       └── Performance.log
+    │   ├── Delete
+    │   │   ├── Output
+    │   │   │   └── Delete.sql
+    │   │   ├── Performance
+    │   │   │   └── Performance.log
+    │   │   └── Process
+    │   │       └── Delete.py
+    │   ├── Insert
+    │   │   ├── Output
+    │   │   │   └── Insert.sql
+    │   │   ├── Performance
+    │   │   │   └── Performance.log
+    │   │   └── Process
+    │   │       └── Insert.py
+    │   ├── Search
+    │   │   ├── Output
+    │   │   │   └── Search.sql
+    │   │   └── Performance
+    │   │       └── Performance.log
+    │   ├── Select
+    │   │   ├── Output
+    │   │   │   └── Select.sql
+    │   │   └── Performance
+    │   │       └── Performance.log
+    │   └── Update
+    │       ├── Output
+    │       │   └── Update.sql
+    │       ├── Performance
+    │       │   └── Performance.log
+    │       └── Process
+    │           └── Update.py
+    └── Uml
+        ├── Er.pu
+        └── Erd.png
+
+55 directories, 40 files
+```
